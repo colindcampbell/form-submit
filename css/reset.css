@@ -1,0 +1,128 @@
+/* 
+	 http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Page styles */
+
+html, body {
+  background: #e5ebeb;
+  font-family: sans-serif;
+}
+
+body > header {
+  background: #333;
+	height: 60px;
+  line-height: 60px;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+body > header > img {
+  height: 40px;
+  margin: 10px;
+}
+
+body > main {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+body > main > .masthead {
+  background-image: url('../images/masthead.jpg');
+  background-position: center;
+  box-sizing: border-box;
+  height: 450px;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+body > main > .masthead > h2 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0 50px;
+  padding: 50px 0;
+  width: 550px;
+}
+
+body > main > .masthead > h3 {
+  border: 3px solid #333;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 50px;
+  padding: 12px;
+  text-align: center;
+}
+
+body > main > .content {
+  background: #fff;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 40px 20px 20px 20px;
+  width: 1200px;
+}
+
+body > main > .content > h4 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 auto 40px auto;
+  width: 800px;
+}
+
+body > main > .content > p {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 auto 20px auto;
+  width: 800px;
+}
+
+body > footer {
+  background: #333;
+  color: #ccc;
+  height: 40px;
+  font-size: 12px;
+  line-height: 40px;
+  margin: 0 auto;
+  text-align: center;
+  width: 1200px;
+}
