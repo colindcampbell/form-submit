@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 #survey {
   background: #fff;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
@@ -6,4 +10,94 @@
   height: 600px;
   position: fixed;
   width: 350px;
+}
+#survey .form-header {
+  height: 50px;
+  background: #333;
+  width: 100%;
+  border-bottom: 3px solid #1a6b96;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 15px 0 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+#survey .form-header > img {
+  height: 30px;
+  width: auto;
+}
+#survey .form-header #close {
+  text-align: right;
+  color: #fff;
+  font-style: 18px;
+  padding: 5px;
+  cursor: pointer;
+}
+#survey .form-container {
+  padding: 40px;
+}
+#survey .form-container > h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+#survey .form-row {
+  margin-bottom: 20px;
+}
+#survey .form-row:last-child {
+  text-align: right;
+}
+#survey .form-row label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+#survey .form-row input, #survey .form-row select, #survey .form-row textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  -webkit-appearance: none;
+  background: #ffffff;
+}
+#survey .form-row input::-webkit-input-placeholder, #survey .form-row select::-webkit-input-placeholder, #survey .form-row textarea::-webkit-input-placeholder {
+  font-style: italic;
+}
+#survey .form-row input::-moz-placeholder, #survey .form-row select::-moz-placeholder, #survey .form-row textarea::-moz-placeholder {
+  font-style: italic;
+}
+#survey .form-row input:-ms-input-placeholder, #survey .form-row select:-ms-input-placeholder, #survey .form-row textarea:-ms-input-placeholder {
+  font-style: italic;
+}
+#survey .form-row input::placeholder, #survey .form-row select::placeholder, #survey .form-row textarea::placeholder {
+  font-style: italic;
+}
+#survey .form-row input:focus, #survey .form-row select:focus, #survey .form-row textarea:focus {
+  background: #e0f4ff;
+  outline-width: 3px;
+}
+#survey .form-row button {
+  background: #1a6b96;
+  border: none;
+  color: #fff;
+  width: 50%;
+  padding: 8px 0;
+  border-radius: 5px;
+}
+#survey .form-footer {
+  position: absolute;
+  bottom: 0;
+  background: #ccc;
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  vertical-align: middle;
+  line-height: 30px;
 }

@@ -2,8 +2,6 @@
 <html>
   <head>
     <title>Nuance - Automated Solutions - Candidate Assessment</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/main.css">
   </head>
   <body>
 
@@ -13,9 +11,40 @@
       Good luck!
     -->
 
-    <div id="survey">
-      
+   <div id="survey">
+    <div class="form-header">
+      <img src="../image/logo.png" alt="Nuance" />
+      <div id="close">&times;</div>
     </div>
+    <div class="form-container">
+      <h3>How can we help you?</h3>
+      <form>
+        <div class="form-row">
+          <label for="full-name">* Full Name</label>
+          <input id="full-name" placeholder="John Doe"/>
+        </div>
+        <div class="form-row">
+          <label for="phone-number">* Phone Number</label>
+          <input id="phone-number" placeholder="888-123-4567"/>
+        </div>
+        <div class="form-row">
+          <label for="state">* State</label>
+          <select id="state" />
+            <option value="~" disabled default>Please Select a State</option>
+            <option value="california">California</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="question">* Please describe your question</label>
+          <textarea id="question" ></textarea>
+        </div>
+        <div class="form-row">
+          <button id="form-submit" type="submit" value="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div class="form-footer">Powered by Nuance</div>
+   </div>
 
     <!-- You shouldn't need to change any of the code below here -->
 
@@ -39,6 +68,5 @@
     <footer>
       &copy; 2017 Nuance Communications, Inc.
     </footer>
-    <script src="js/index.js"></script>
   </body>
 </html>
