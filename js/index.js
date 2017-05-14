@@ -56,19 +56,20 @@ var formApp = (function () {
 		// 	numbers:8182348765,
 		// 	punctuation:'--'
 		// }
-		var numberSplit = value.trim().split('').reduce(function(result, character){
+		var numberSplit = value.trim().split('').reduce(function(result, character, index){
 			if (isNaN(parseInt(character))) {
 				result.punctuation = result.punctuation + character;
+				result.punctuationIndex = result.punctuationIndex + index;
 			}else{
 				result.numbers = result.numbers + character;
 			}
 			return result;
-		},{numbers:'',punctuation:''});
-
+		},{numbers:'',punctuation:'',punctuationIndex:''});
+		// For phone numbers using punctuation, the punctuationIndex makes sure they were in the right position
 		if (numberSplit.numbers.length === 10 && 
 				numberSplit.punctuation === '' ||
-				numberSplit.punctuation === '--' ||
-				numberSplit.punctuation === '() -'){
+			 (numberSplit.punctuation === '--' && numberSplit.punctuationIndex === '37') ||
+			 (numberSplit.punctuation === '() -' && numberSplit.punctuationIndex === '0459') ){
 			return true;
 		}else{
 			validator.invalidInput(selector, 'invalid phone number');
