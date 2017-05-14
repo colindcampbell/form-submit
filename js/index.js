@@ -54,7 +54,8 @@ var formApp = (function () {
 		// For example, '818-234-8765' would return:
 		// {
 		// 	numbers:8182348765,
-		// 	punctuation:'--'
+		// 	punctuation:'--',
+		//  punctuationIndex:'37',
 		// }
 		var numberSplit = value.trim().split('').reduce(function(result, character, index){
 			if (isNaN(parseInt(character))) {
