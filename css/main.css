@@ -65,7 +65,7 @@
 }
 #survey .form-row.invalid input, #survey .form-row.invalid select, #survey .form-row.invalid textarea {
   background: #FFC0CB;
-  outline-color: #FF0000;
+  border-color: #FF0000;
   color:#FF0000;
 }
 #survey .form-row label {
