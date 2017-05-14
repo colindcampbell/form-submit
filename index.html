@@ -2,46 +2,50 @@
 <html>
   <head>
     <title>Nuance - Automated Solutions - Candidate Assessment</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/main.css">
   </head>
   <body>
 
-    <!-- 
-      Most (if not all) of your code should be within this #survey!
-      Please use ./css/main.css and ./js/index.js for additional styles/js 
-      Good luck!
-    -->
-
    <div id="survey">
     <div class="form-header">
-      <img src="../image/logo.png" alt="Nuance" />
+      <img src="./images/logo.png" alt="Nuance" />
       <div id="close">&times;</div>
     </div>
     <div class="form-container">
-      <h3>How can we help you?</h3>
-      <form>
+      <form id="survey-form" data-url="/api/endpoint">
+        <h3>How can we help you?</h3>
         <div class="form-row">
-          <label for="full-name">* Full Name</label>
-          <input id="full-name" placeholder="John Doe"/>
+          <label for="fullName">* Full Name</label>
+          <input id="fullName" name="fullName" placeholder="John Doe"/>
         </div>
         <div class="form-row">
-          <label for="phone-number">* Phone Number</label>
-          <input id="phone-number" placeholder="888-123-4567"/>
+          <label for="phoneNumber">* Phone Number</label>
+          <input id="phoneNumber" name="phoneNumber" placeholder="888-123-4567"/>
         </div>
         <div class="form-row">
           <label for="state">* State</label>
-          <select id="state" />
-            <option value="~" disabled default>Please Select a State</option>
+          <select id="state" name="state" />
+            <option value="" disabled selected>Please Select a State</option>
+            <option value="alabama">Alabama</option>
             <option value="california">California</option>
+            <option value="wyoming">Wyoming</option>
           </select>
+          <i>&#9660;</i>
         </div>
         <div class="form-row">
           <label for="question">* Please describe your question</label>
-          <textarea id="question" ></textarea>
+          <textarea id="question" name="question" ></textarea>
         </div>
         <div class="form-row">
-          <button id="form-submit" type="submit" value="submit">Submit</button>
+          <button id="formSubmit" type="submit" value="submit">Submit</button>
+          <span>* required field</span>
         </div>
       </form>
+    </div>
+    <div class="form-container" id="thank-you-message" style="display:none">
+      <h3>Thank you!</h3>
+      <p>Your information was submitted successfully. We will now connect you to the next available chat agent.</p>
     </div>
     <div class="form-footer">Powered by Nuance</div>
    </div>
@@ -68,5 +72,6 @@
     <footer>
       &copy; 2017 Nuance Communications, Inc.
     </footer>
+    <script src="js/index.js"></script>
   </body>
 </html>

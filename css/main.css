@@ -1,4 +1,4 @@
-* {
+#survey * {
   box-sizing: border-box;
 }
 
@@ -34,28 +34,49 @@
 #survey .form-header #close {
   text-align: right;
   color: #fff;
-  font-style: 18px;
-  padding: 5px;
+  font-size: 20px;
+  padding: 10px;
   cursor: pointer;
 }
 #survey .form-container {
   padding: 40px;
 }
-#survey .form-container > h3 {
+#survey .form-container h3 {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 30px;
 }
+#survey .form-container p {
+  line-height: 1.6;
+}
 #survey .form-row {
   margin-bottom: 20px;
+  position: relative;
 }
 #survey .form-row:last-child {
   text-align: right;
+}
+#survey .form-row:last-child > span {
+  display: block;
+  font-size: 12px;
+}
+#survey .form-row.invalid label {
+  color: red;
+}
+#survey .form-row.invalid input, #survey .form-row.invalid select, #survey .form-row.invalid textarea {
+  background: #FFC0CB;
+  outline-color: #FF0000;
 }
 #survey .form-row label {
   display: block;
   margin-bottom: 8px;
   font-size: 14px;
+}
+#survey .form-row i {
+  font-size: 8px;
+  position: absolute;
+  right: 8px;
+  bottom: 14px;
 }
 #survey .form-row input, #survey .form-row select, #survey .form-row textarea {
   width: 100%;
@@ -82,6 +103,9 @@
   background: #e0f4ff;
   outline-width: 3px;
 }
+#survey .form-row select {
+  cursor: pointer;
+}
 #survey .form-row button {
   background: #1a6b96;
   border: none;
@@ -89,6 +113,9 @@
   width: 50%;
   padding: 8px 0;
   border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  cursor: pointer;
 }
 #survey .form-footer {
   position: absolute;
